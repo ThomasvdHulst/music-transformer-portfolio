@@ -13,8 +13,7 @@ export default function AboutPage() {
               About the Project
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Learn about the creator, motivations, and future directions for the 
-              RiskOptimix Music Transformer project.
+              Learn about the RiskOptimix Music Transformer project.
             </p>
           </div>
         </div>

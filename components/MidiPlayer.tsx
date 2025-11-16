@@ -191,6 +191,9 @@ export default function MidiPlayer({ midiUrl, title, description }: MidiPlayerPr
 
       // Lazily create a more realistic piano instrument after the context is started
       if (!synthRef.current) {
+        // Show loading state while the piano samples are fetched (especially important on mobile networks)
+        setIsLoading(true);
+
         const sampler = new Tone.Sampler({
           // Using Tone.js Salamander grand piano samples for a natural piano sound
           urls: {
@@ -229,9 +232,16 @@ export default function MidiPlayer({ midiUrl, title, description }: MidiPlayerPr
           baseUrl: 'https://tonejs.github.io/audio/salamander/',
         }).toDestination();
 
+        // Wait until all required samples are loaded before starting playback
+        if (sampler.loaded instanceof Promise) {
+          await sampler.loaded;
+        }
+
         // Slight volume trim so it sits comfortably in the mix
         sampler.volume.value = -6;
         synthRef.current = sampler;
+
+        setIsLoading(false);
       }
 
       // Start or resume manual playback loop
