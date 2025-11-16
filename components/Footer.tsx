@@ -14,7 +14,7 @@ export default function Footer() {
               RiskOptimix Music Transformer
             </h3>
             <p className="text-sm text-gray-600">
-              A recreation of Google's Music Transformer model,
+              A recreation of Google&apos;s Music Transformer model,
               bringing AI-powered composition to everyone.
             </p>
           </div>

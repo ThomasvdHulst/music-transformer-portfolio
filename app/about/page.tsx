@@ -52,7 +52,7 @@ export default function AboutPage() {
               </h2>
               <div className="prose prose-lg text-gray-700 space-y-4">
                 <p>
-                  Hi! I'm <strong>Thomas</strong>, a master's student in Econometrics 
+                  Hi! I&apos;m <strong>Thomas</strong>, a Master&apos;s student in Econometrics 
                   and Operations Research at the Vrije Universiteit Amsterdam. I have a passion 
                   for both machine learning and piano music, and this project brings those 
                   two interests together.
@@ -66,9 +66,9 @@ export default function AboutPage() {
                 </p>
                 <p>
                   This project is part of my portfolio and represents what I learned about 
-                  neural networks, attention mechanisms, and music generation. If you're 
+                  neural networks, attention mechanisms, and music generation. If you&apos;re 
                   interested in the technical details or want to try something similar, 
-                  feel free to check out the code and resources I've shared.
+                  feel free to check out the code and resources I&apos;ve shared.
                 </p>
               </div>
             </div>
@@ -206,18 +206,18 @@ export default function AboutPage() {
             <p className="text-lg leading-relaxed mb-6">
               I started this project because I wanted to really understand how transformer 
               models work. Reading papers is one thing, but implementing one from scratch 
-              teaches you what's actually important and where the tricky parts are.
+              teaches you what&apos;s actually important and where the tricky parts are.
             </p>
             <p className="text-lg leading-relaxed mb-6">
               I chose the Music Transformer specifically because:
             </p>
             <ul className="space-y-3 mb-6">
               <li>
-                <strong>It combines my interests:</strong> I've picked up learning piano recently, 
+                <strong>It combines my interests:</strong> I&apos;ve picked up learning piano recently, 
                 so working with music data kept me motivated through the challenging parts
               </li>
               <li>
-                <strong>It's more interesting than text:</strong> Music has clear structure 
+                <strong>It&apos;s more interesting than text:</strong> Music has clear structure 
                 and timing that you can actually hear, making it easier to debug and understand 
                 what the model is learning
               </li>
@@ -227,7 +227,7 @@ export default function AboutPage() {
               </li>
             </ul>
             <p className="text-lg leading-relaxed">
-              If you're working on something similar or just curious about how this all works, 
+              If you&apos;re working on something similar or just curious about how this all works, 
               feel free to explore the code and reach out with questions.
             </p>
           </div>
@@ -296,9 +296,9 @@ export default function AboutPage() {
           <div className="bg-gradient-to-r from-academic-blue-light to-blue-50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-semibold mb-4">Interested in Collaborating?</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              I'm always open to discussing new ideas, research collaborations, or 
-              potential applications of this technology. Whether you're working on 
-              similar projects or have suggestions for improvements, I'd love to hear from you.
+              I&apos;m always open to discussing new ideas, research collaborations, or 
+              potential applications of this technology. Whether you&apos;re working on 
+              similar projects or have suggestions for improvements, I&apos;d love to hear from you.
             </p>
             <a
               href="mailto:t.van.der.hulst@student.vu.nl"

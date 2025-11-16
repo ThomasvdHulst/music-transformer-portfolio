@@ -15,7 +15,7 @@ export default function Home() {
               RiskOptimix Music Transformer
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              A Recreation of Google's Music Transformer model
+              A Recreation of Google&apos;s Music Transformer model
             </p>
             <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
               Using the transformer architecture and attention mechanisms to generate expressive musical compositions.
@@ -97,7 +97,7 @@ export default function Home() {
                 maintain some consistency in style and structure.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                This project is my recreation of Google's Music Transformer architecture, 
+                This project is my recreation of Google&apos;s Music Transformer architecture, 
                 trained on piano performances to learn patterns in melody, harmony, and timing. 
                 The goal was to understand how these models work and demonstrate the results.
               </p>
@@ -132,7 +132,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-6">
-              These samples demonstrate the model's ability to generate different musical pieces.
+              These samples demonstrate the model&apos;s ability to generate different musical pieces.
             </p>
             <Link
               href="/research"
