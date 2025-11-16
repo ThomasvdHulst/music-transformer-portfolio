@@ -1,0 +1,10 @@
+# MIDI Files Directory
+
+Place your generated MIDI files here with the following names:
+- bach-style-sample.mid
+- jazz-improvisation-sample.mid
+- romantic-sonata-sample.mid
+- minimalist-sample.mid
+
+You can add or remove samples by editing the content/musicSamples.json file.
+

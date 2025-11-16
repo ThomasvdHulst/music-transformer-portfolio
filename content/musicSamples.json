@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Sonata in A Major, D. 664, I. Allegro moderato",
+    "description": "A continuation of a random piece from the MAESTRO dataset: Sonata in A Major, D. 664, I. Allegro moderato. Real part: 0 - 18.3s, Generated part: 18.3s - 30.6s.",
+    "midiUrl": "/midi/generated_music_20251116_145249_sample1.mid"
+  },
+  {
+    "id": "sample-2",
+    "title": "Sonata in D Major, Hob. XVI:24",
+    "description": "A continuation of a random piece from the MAESTRO dataset: Sonata in D Major, Hob. XVI:24. Real part: 0 - 37.7s, Generated part: 37.7s - 51.5s.",
+    "midiUrl": "/midi/generated_music_20251116_145305_sample2.mid"
+  },
+  {
+    "id": "sample-3",
+    "title": "Jardins sous la pluie from Estampes",
+    "description": "A continuation of a random piece from the MAESTRO dataset: Jardins sous la pluie from Estampes. Real part: 0 - 9.2s, Generated part: 9.2s - 16.5s.",
+    "midiUrl": "/midi/generated_music_20251116_145319_sample3.mid"
+  },
+  {
+    "id": "sample-4",
+    "title": "Sonata No. 16 in G Major, Op. 31 No. 1, First Movement",
+    "description": "A continuation of a random piece from the MAESTRO dataset: Sonata No. 16 in G Major, Op. 31 No. 1, First Movement. Real part: 0 - 13.9s, Generated part: 13.9s - 24.3s.",
+    "midiUrl": "/midi/generated_music_20251116_145334_sample4.mid"
+  }
+]
+
