@@ -69,6 +69,15 @@ export default function AboutPage() {
                   interested in the technical details or want to try something similar, 
                   feel free to check out the code and resources I&apos;ve shared.
                 </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                  <strong>A note on this project:</strong> This is an implementation of Google&apos;s 
+                  Music Transformer paper, not original research. Since I wanted the code to be 
+                  efficient enough to train on a regular laptop, I worked with AI tools 
+                  to help translate the theory into optimized code. For me, this project was about 
+                  learning how transformers work while creating something I find genuinely cool and 
+                  useful. I&apos;m sharing it here in the hope that others might learn from it too. 
+                  If you have feedback, ideas, or questions, I&apos;d love to hear from you!
+                </p>
               </div>
             </div>
           </div>

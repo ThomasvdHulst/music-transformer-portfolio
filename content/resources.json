@@ -2,7 +2,7 @@
   {
     "id": "paper",
     "title": "Academic Paper",
-    "description": "Read the full research paper detailing the architecture, training methodology, and results of the RiskOptimix Music Transformer.",
+    "description": "Research paper on the architecture, training, and results.",
     "icon": "FileText",
     "href": "/papers/music-transformer-paper.pdf",
     "isExternal": false,
@@ -11,29 +11,28 @@
   {
     "id": "github",
     "title": "GitHub Repository",
-    "description": "Access the complete source code, training scripts, and model implementations. Contributions and stars are welcome!",
+    "description": "Source code, training scripts, and model implementations.",
     "icon": "Github",
-    "href": "https://github.com/yourusername/music-transformer",
+    "href": "https://github.com/ThomasvdHulst/MusicTransformer.git",
     "isExternal": true,
     "isDownload": false
   },
   {
     "id": "notebooks",
     "title": "Jupyter Notebooks",
-    "description": "Explore interactive notebooks demonstrating model training, inference, and music analysis. Perfect for learning and experimentation.",
+    "description": "Interactive notebooks with examples of training, inference, and analysis.",
     "icon": "BookOpen",
-    "href": "https://github.com/yourusername/music-transformer/tree/main/notebooks",
+    "href": "https://github.com/ThomasvdHulst/MusicTransformer/tree/main/notebooks",
     "isExternal": true,
     "isDownload": false
   },
   {
     "id": "dataset",
     "title": "Training Dataset",
-    "description": "Information about the MAESTRO dataset and preprocessing pipeline used to train the model on high-quality piano performances.",
+    "description": "Information about the MAESTRO dataset and preprocessing pipeline used for training.",
     "icon": "Database",
     "href": "https://magenta.tensorflow.org/datasets/maestro",
     "isExternal": true,
     "isDownload": false
   }
 ]
-

@@ -1,6 +1,7 @@
 import SectionHeading from '@/components/SectionHeading';
 import ResourceCard from '@/components/ResourceCard';
 import { FileText, Github, BookOpen, Database, Layers, TrendingUp, Cpu, Zap } from 'lucide-react';
+import Image from 'next/image';
 import resources from '@/content/resources.json';
 
 // Map icon names to actual icon components
@@ -13,7 +14,7 @@ const iconMap: { [key: string]: any } = {
 
 export default function ResearchPage() {
   return (
-    <div className="min-h-screen">
+<div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-academic-blue-light to-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,8 +23,7 @@ export default function ResearchPage() {
               Research & Technical Details
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              An in-depth exploration of the Music Transformer architecture, training methodology, 
-              and experimental results.
+              Details on the Music Transformer architecture, training approach, and results.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function ResearchPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Research Resources"
-            subtitle="Access papers, code, and datasets"
+            subtitle="Papers, code, and datasets"
             centered
           />
           
@@ -59,7 +59,7 @@ export default function ResearchPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Model Architecture"
-            subtitle="Understanding the transformer-based design"
+            subtitle="Transformer-based design overview"
           />
           
           <div className="grid md:grid-cols-2 gap-12 mb-12">
@@ -72,25 +72,24 @@ export default function ResearchPage() {
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h4 className="font-semibold text-lg mb-2">Relative Self-Attention</h4>
                   <p className="text-gray-600 text-sm">
-                    Novel attention mechanism that incorporates relative positional information, 
-                    allowing the model to process sequences of arbitrary length while maintaining 
-                    computational efficiency. This is crucial for capturing long-range musical dependencies.
+                    An attention mechanism that uses relative positional information to handle 
+                    sequences of varying length. This helps capture long-range patterns in music.
                   </p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h4 className="font-semibold text-lg mb-2">Multi-Head Attention</h4>
                   <p className="text-gray-600 text-sm">
-                    Multiple attention heads learn different aspects of musical structure simultaneously—
-                    harmony, melody, rhythm, and dynamics—enabling rich, multi-dimensional representations.
+                    Multiple attention heads process different aspects of musical structure 
+                    like harmony, melody, and rhythm in parallel.
                   </p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h4 className="font-semibold text-lg mb-2">Feed-Forward Networks</h4>
                   <p className="text-gray-600 text-sm">
-                    Position-wise feed-forward layers provide non-linear transformations, 
-                    allowing the model to learn complex mappings from input to output sequences.
+                    Position-wise layers that apply non-linear transformations to learn 
+                    complex mappings between input and output sequences.
                   </p>
                 </div>
               </div>
@@ -105,7 +104,7 @@ export default function ResearchPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between border-b pb-2">
                     <span className="font-medium">Layers:</span>
-                    <span className="text-gray-600">12 transformer blocks</span>
+                    <span className="text-gray-600">6 transformer blocks</span>
                   </div>
                   <div className="flex justify-between border-b pb-2">
                     <span className="font-medium">Hidden Size:</span>
@@ -116,27 +115,25 @@ export default function ResearchPage() {
                     <span className="text-gray-600">8 heads per layer</span>
                   </div>
                   <div className="flex justify-between border-b pb-2">
+                    <span className="font-medium">Feed-Forward Size:</span>
+                    <span className="text-gray-600">2048 dimensions</span>
+                  </div>
+                  <div className="flex justify-between border-b pb-2">
+                    <span className="font-medium">Relative Attention Window:</span>
+                    <span className="text-gray-600">1024 events</span>
+                  </div>
+                  <div className="flex justify-between border-b pb-2">
                     <span className="font-medium">Parameters:</span>
-                    <span className="text-gray-600">~41 million</span>
+                    <span className="text-gray-600">~25 million</span>
                   </div>
                   <div className="flex justify-between border-b pb-2">
                     <span className="font-medium">Vocabulary Size:</span>
-                    <span className="text-gray-600">~388 tokens</span>
+                    <span className="text-gray-600">391 tokens</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium">Context Window:</span>
                     <span className="text-gray-600">2048 events</span>
                   </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-academic-blue to-academic-blue-dark text-white p-6 rounded-lg">
-                <h4 className="font-semibold text-lg mb-2">Architecture Diagram</h4>
-                <div className="bg-white/10 rounded p-4 text-center h-48 flex items-center justify-center">
-                  <p className="text-sm">
-                    [Placeholder for detailed architecture diagram showing transformer layers, 
-                    attention mechanisms, and data flow]
-                  </p>
                 </div>
               </div>
             </div>
@@ -172,13 +169,13 @@ export default function ResearchPage() {
               <Zap className="text-academic-blue mb-4" size={32} />
               <h3 className="text-xl font-semibold mb-3">Optimization</h3>
               <p className="text-gray-600 mb-4">
-                Adam optimizer with learning rate scheduling and gradient clipping 
-                for stable convergence over extended training runs.
+                AdamW optimizer with Transformer learning rate scheduling and gradient clipping 
+                for stable convergence during training.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Learning rate: 0.0001</li>
-                <li>• Batch size: 32</li>
-                <li>• Warmup steps: 4000</li>
+                <li>• Optimizer: AdamW</li>
+                <li>• Effective batch size: 16 (batch size 2 × 8 accumulation steps)</li>
+                <li>• Learning rate schedule: Transformer with 4000 warmup steps</li>
                 <li>• Gradient clipping: 1.0</li>
               </ul>
             </div>
@@ -187,24 +184,71 @@ export default function ResearchPage() {
               <TrendingUp className="text-academic-blue mb-4" size={32} />
               <h3 className="text-xl font-semibold mb-3">Training Time</h3>
               <p className="text-gray-600 mb-4">
-                Trained for approximately 300,000 steps across multiple GPUs, 
-                with regular checkpointing and evaluation.
+                Trained using the full Music Transformer configuration on a MacBook Pro with 
+                an M3 Pro chip, completing in approximately 8 hours training time.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Duration: ~1 week</li>
-                <li>• Hardware: 4x NVIDIA V100</li>
-                <li>• Evaluation every 5K steps</li>
-                <li>• Best checkpoint saved</li>
+                <li>• Duration: ~8 hours</li>
+                <li>• Hardware: Apple MacBook Pro (M3 Pro)</li>
+                <li>• Device: Apple Silicon (MPS backend)</li>
+                <li>• Regular checkpointing and evaluation</li>
               </ul>
             </div>
           </div>
 
           <div className="bg-academic-blue-light p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-4">Training Metrics</h3>
-            <div className="bg-white rounded p-6 h-64 flex items-center justify-center">
-              <p className="text-gray-600 text-center">
-                [Placeholder for training loss curves, perplexity graphs, and convergence plots]
-              </p>
+            <div className="bg-white rounded p-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-gray-900 text-center md:text-left">
+                    Training Loss
+                  </h4>
+                  <Image
+                    src="/images/train-loss.png"
+                    alt="Training loss over time"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto rounded-md shadow-sm"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-gray-900 text-center md:text-left">
+                    Training Accuracy
+                  </h4>
+                  <Image
+                    src="/images/train-accuracy.png"
+                    alt="Training accuracy over time"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto rounded-md shadow-sm"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-gray-900 text-center md:text-left">
+                    Training Perplexity
+                  </h4>
+                  <Image
+                    src="/images/train-perplexity.png"
+                    alt="Training perplexity over time"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto rounded-md shadow-sm"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-gray-900 text-center md:text-left">
+                    Learning Rate Schedule
+                  </h4>
+                  <Image
+                    src="/images/train-learningrate.png"
+                    alt="Learning rate schedule over training"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto rounded-md shadow-sm"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -224,31 +268,31 @@ export default function ResearchPage() {
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="font-medium">Perplexity (test set)</span>
-                    <span className="text-academic-blue font-bold">4.23</span>
+                    <span className="font-medium">Evaluation Loss</span>
+                    <span className="text-academic-blue font-bold">1.9232</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-academic-blue h-2 rounded-full" style={{ width: '85%' }}></div>
+                    <div className="bg-academic-blue h-2 rounded-full" style={{ width: '65%' }}></div>
                   </div>
                 </div>
                 
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="font-medium">Note Accuracy</span>
-                    <span className="text-academic-blue font-bold">87.3%</span>
+                    <span className="font-medium">Perplexity (evaluation set)</span>
+                    <span className="text-academic-blue font-bold">6.91</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-academic-blue h-2 rounded-full" style={{ width: '87%' }}></div>
+                    <div className="bg-academic-blue h-2 rounded-full" style={{ width: '60%' }}></div>
                   </div>
                 </div>
                 
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="font-medium">Timing Precision</span>
-                    <span className="text-academic-blue font-bold">91.8%</span>
+                    <span className="font-medium">Token Accuracy</span>
+                    <span className="text-academic-blue font-bold">42.99%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-academic-blue h-2 rounded-full" style={{ width: '92%' }}></div>
+                    <div className="bg-academic-blue h-2 rounded-full" style={{ width: '43%' }}></div>
                   </div>
                 </div>
               </div>
@@ -258,78 +302,22 @@ export default function ResearchPage() {
               <h3 className="text-2xl font-semibold mb-6">Qualitative Assessment</h3>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  <strong>Musical Coherence:</strong> Generated compositions maintain 
-                  thematic consistency and structural integrity across extended passages, 
-                  with clear phrase boundaries and harmonic progression.
+                  <strong>Musical Coherence:</strong> Generated pieces show consistent 
+                  themes and structure with recognizable phrase boundaries and 
+                  harmonic progressions.
                 </p>
                 <p>
-                  <strong>Stylistic Accuracy:</strong> The model successfully captures 
-                  genre-specific characteristics, from classical counterpoint to 
-                  contemporary jazz harmonies.
+                  <strong>Stylistic Accuracy:</strong> The model reproduces characteristics 
+                  of different genres.
                 </p>
                 <p>
-                  <strong>Expressive Quality:</strong> Dynamic variation and timing 
-                  nuances create musically expressive performances that sound natural 
-                  and intentional rather than mechanical.
+                  <strong>Expressive Quality:</strong> Variations in dynamics and timing 
+                  give the output a less mechanical quality.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4">Sample Analysis</h3>
-            <div className="bg-gray-50 rounded p-6 h-64 flex items-center justify-center">
-              <p className="text-gray-600 text-center">
-                [Placeholder for musical analysis visualizations: pitch distributions, 
-                rhythm patterns, harmonic analysis, etc.]
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Future Work */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Future Developments"
-            subtitle="Ongoing research and planned enhancements"
-          />
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-academic-blue-light to-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Interactive Demo</h3>
-              <p className="text-gray-700 mb-3">
-                Real-time interactive keyboard interface for live music generation and 
-                collaborative composition with the AI.
-              </p>
-              <span className="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
-                Coming Soon
-              </span>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Multi-Instrument</h3>
-              <p className="text-gray-700 mb-3">
-                Extending the model to generate full orchestral arrangements and 
-                ensemble performances beyond solo piano.
-              </p>
-              <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
-                In Progress
-              </span>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Style Transfer</h3>
-              <p className="text-gray-700 mb-3">
-                Conditional generation allowing users to specify style, mood, and 
-                structural parameters for customized compositions.
-              </p>
-              <span className="inline-block bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">
-                Planned
-              </span>
-            </div>
-          </div>
         </div>
       </section>
     </div>
