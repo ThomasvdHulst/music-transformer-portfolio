@@ -284,7 +284,7 @@ export default function AboutPage() {
             </a>
             
             <a
-              href="https://github.com/thomasvanderhulst"
+              href="https://github.com/ThomasvdHulst/MusicTransformer.git"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all text-center group"

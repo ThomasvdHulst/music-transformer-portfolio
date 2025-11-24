@@ -59,7 +59,7 @@ export default function Footer() {
             </h4>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/ThomasvdHulst/MusicTransformer.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-academic-blue transition-colors"
